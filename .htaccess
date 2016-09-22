@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+
+RewriteRule ^home$ master.php?module=home [L]
+RewriteRule ^add-new-post\.html$ master.php?module=add-new-post [L]
+RewriteRule ^topic\.html$ master.php?module=topic [L]
+RewriteRule ^detail-(.*)-(.*)\.html$ master.php?module=detail-post&id=$1 [L]
+RewriteRule ^cat-detail-(.*)-(.*)-(.*)-(.*)\.html$ master.php?module=cat_detail&id=$1&cat=$2&page=$3&nm=$4 [L]
+RewriteRule ^all-categories\.html$ master.php?module=all-categories [L]
+RewriteRule ^sign-up\.html$ master.php?module=sign_up [L]
+RewriteRule ^sign-in\.html$ master.php?module=sign_in [L]
+RewriteRule ^profile\.html$ master.php?module=profile [L]
+RewriteRule ^edit_profile\.html$ master.php?module=edit_profile [L]
+RewriteRule ^send-message-(.*)-(.*)\.html$ master.php?module=send_message&id=$1&title=$2 [L]
+RewriteRule ^messages-([0-9]+)-(.*)\.html$ master.php?module=messages&div=$1&page=$2 [L]
+RewriteRule ^success\.html$ master.php?module=success [L]
+RewriteRule ^sign-out\.html$ master.php?module=sign_out [L]
+RewriteRule ^profile-(.*)-(.*)\.html$ master.php?module=profile_member&id=$1&title=$2 [L]
+RewriteRule ^read-messages-([0-9])-(.*)\.html$ master.php?module=read-messages&div=$1&id=$2 [L]
+
+Options All -Indexes
+</IfModule>
