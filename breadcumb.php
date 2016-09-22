@@ -14,4 +14,5 @@ elseif ($_GET['module'] == 'detail-post'){
 elseif ($_GET['module'] == 'cat_detail'){
 	echo "<a href='home'>Home</a> <font color='#999999'>></font> Search Post by Country";
 }
+//comment section
 ?>
